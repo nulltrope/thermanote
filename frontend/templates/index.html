@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Include stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+
+    <!-- Include the Quill library -->
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+
+    <title>Editor</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <div id="toolbar">
+    <span class="ql-formats">
+      <select class="ql-size">
+        <option value="small"></option>
+        <!-- Note a missing, thus falsy value, is used to reset to default -->
+        <option selected></option>
+        <option value="large"></option>
+        <option value="huge"></option>
+      </select>
+    </span>
+    <span class="ql-formats">
+      <button class="ql-bold"></button>
+      <button class="ql-italic"></button>
+      <button class="ql-underline"></button>
+      <button class="ql-strike"></button>
+    </span>
+    <span class="ql-formats">
+      <button id="print-button"><img id="printer-icon" src="printer-sm.png"></button>
+    </span>
+  </div>
+    <div id="editor">
+        <h2>Demo Content</h2>
+        <p>Preset build with <b>snow</b> theme, and some <i>more common</i> formats.</p>
+      </div>
+
+    <div id="preview-container"></div>
+    <div id="preview-controls" class="btns">
+      <button id="preview-print-button" class="btn btn--primary">Print</button>
+      <button id="preview-preview-button" class="btn btn--subtle">Preview</button>
+      <button id="preview-cancel-button" class="btn btn--subtle">Cancel</button>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
